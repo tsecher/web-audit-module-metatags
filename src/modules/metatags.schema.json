@@ -1,0 +1,57 @@
+{
+    "id": "seo_light",
+    "label": "SEO Light",
+    "description": "An SEO light indicator",
+    "types": [
+      "page"
+    ],
+    "structure": {
+      "seo_light": {
+        "label": "SEO Light",
+        "description": "An SEO Light",
+        "structure": {
+          "url": {
+            "label": "Url",
+            "description": "The audited page",
+            "type": "string"
+          },
+          "context": {
+            "label": "Context",
+            "description": "The context",
+            "type": "string"
+          },
+          "h1": {
+            "label": "H1 value",
+            "description": "The H1 value.",
+            "type": "string"
+          },
+          "metatag_title": {
+            "label": "Metatag title",
+            "description": "The Metatag title.",
+            "type": "string"
+          },
+          "canonical_url": {
+            "label": "Canonical URL",
+            "description": "The Canonical url.",
+            "type": "string"
+          },
+          "og_title": {
+            "label": "OpenGraph title",
+            "description": "The OpenGraph title.",
+            "type": "string"
+          },
+          "og_description": {
+            "label": "OpenGraph description",
+            "description": "The OpenGraph description.",
+            "type": "string"
+          },
+          "og_image": {
+            "label": "OpenGraph image",
+            "description": "The OpenGraph image.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  
