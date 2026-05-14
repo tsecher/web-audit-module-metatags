@@ -86,11 +86,8 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 
 	/**
 	 * Analyse a context.
-	 *
-	 * @param {string} contextName
-	 * @param {UrlWrapper} urlWrapper
 	 */
-	analyseContext(contextName, urlWrapper) {
+	analyseContext(contextName, contextReport, urlWrapper){
 
 		const eventData = {
 			module: this,
@@ -111,7 +108,6 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 		this.context?.config?.storage?.add(this, 'metatags', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
 		this.context?.eventBus.emit(MetatagsModuleEvents.afterAnalyse, eventData);
-
 	}
 
 	/**
