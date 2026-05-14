@@ -96,7 +96,7 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 			module: this,
 			url: urlWrapper,
 		};
-		this.context?.eventBus.emit(SeoLightModuleEvents.beforeAnalyse, eventData);
+		this.context?.eventBus.emit(MetatagsModuleEvents.beforeAnalyse, eventData);
 		this.context?.eventBus.emit(ModuleEvents.beforeAnalyse, eventData);
 
 		// Summary.
@@ -106,11 +106,11 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 			...contextReport
 		};
 
-		this.context?.eventBus.emit(SeoLightModuleEvents.onResult, eventData);
-		this.context?.config?.logger.result(`SeoLight`, eventData.result, urlWrapper.url.toString());
-		this.context?.config?.storage?.add(this, 'seo_light', this.context, eventData.result);
+		this.context?.eventBus.emit(MetatagsModuleEvents.onResult, eventData);
+		this.context?.config?.logger.result(`Metatags`, eventData.result, urlWrapper.url.toString());
+		this.context?.config?.storage?.add(this, 'metatags', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
-		this.context?.eventBus.emit(SeoLightModuleEvents.afterAnalyse, eventData);
+		this.context?.eventBus.emit(MetatagsModuleEvents.afterAnalyse, eventData);
 
 	}
 
