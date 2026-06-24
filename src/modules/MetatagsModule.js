@@ -105,7 +105,6 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 
 		this.context?.eventBus.emit(MetatagsModuleEvents.onResult, eventData);
 		this.context?.eventBus.emit(ModuleEvents.onAnalyseSummary, {module: this, group_id:`metatags` , url: urlWrapper, summary: eventData.result});
-		this.context?.eventBus.emit(ModuleEvents.onAnalyseSummary, {module: this, group_id:`html_validator` , url: urlWrapper, summary: eventData.result});
 		this.context?.config?.storage?.add(this, 'metatags', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
 		this.context?.eventBus.emit(MetatagsModuleEvents.afterAnalyse, eventData);
