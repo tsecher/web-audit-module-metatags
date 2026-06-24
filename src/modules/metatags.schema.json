@@ -1,14 +1,14 @@
 {
-    "id": "seo_light",
-    "label": "SEO Light",
+    "id": "metatags",
+    "label": "Metatags",
     "description": "An SEO light indicator",
     "types": [
       "page"
     ],
     "structure": {
-      "seo_light": {
-        "label": "SEO Light",
-        "description": "An SEO Light",
+      "metatags": {
+        "label": "Metatags",
+        "description": "Metatags",
         "structure": {
           "url": {
             "label": "Url",

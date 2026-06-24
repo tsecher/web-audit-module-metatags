@@ -58,12 +58,12 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 	async getContextData(data) {
 		return data.wrapper.page.evaluate(() => {
 			return {
-			  h1:            document.querySelector('h1')?.innerText?.trim() || '',
-			  metatag_title:         document.querySelector('title')?.innerText?.trim() || '',
-			  canonical_url:     document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
-			  og_title:       document.querySelector('meta[property="og:title"]')?.getAttribute('content') || '',
+			  h1: document.querySelector('h1')?.innerText?.trim() || '',
+			  metatag_title: document.querySelector('title')?.innerText?.trim() || '',
+			  canonical_url: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+			  og_title: document.querySelector('meta[property="og:title"]')?.getAttribute('content') || '',
 			  og_description: document.querySelector('meta[property="og:description"]')?.getAttribute('content') || '',
-			  og_image:       document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '',
+			  og_image: document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '',
 			};
 		});
 	}
@@ -104,7 +104,8 @@ export default class MetatagsModule extends AbstractPuppeteerJourneyModule {
 		};
 
 		this.context?.eventBus.emit(MetatagsModuleEvents.onResult, eventData);
-		this.context?.config?.logger.result(`Metatags`, eventData.result, urlWrapper.url.toString());
+		this.context?.eventBus.emit(ModuleEvents.onAnalyseSummary, {module: this, group_id:`metatags` , url: urlWrapper, summary: eventData.result});
+		this.context?.eventBus.emit(ModuleEvents.onAnalyseSummary, {module: this, group_id:`html_validator` , url: urlWrapper, summary: eventData.result});
 		this.context?.config?.storage?.add(this, 'metatags', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
 		this.context?.eventBus.emit(MetatagsModuleEvents.afterAnalyse, eventData);
