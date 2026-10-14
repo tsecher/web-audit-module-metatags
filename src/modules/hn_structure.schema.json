@@ -1,0 +1,92 @@
+{
+  "id": "metatags",
+  "label": "Hn Structure",
+  "description": "An SEO light indicator",
+  "types": [
+    "page"
+  ],
+  "structure": {
+    "hn_structure": {
+      "label": "Hn Structure",
+      "description": "Hn Structure",
+      "structure": {
+        "url": {
+          "label": "Url",
+          "description": "The audited page",
+          "type": "string"
+        },
+        "context": {
+          "label": "Context",
+          "description": "The context",
+          "type": "string"
+        },
+        "isValid": {
+          "label": "Valid",
+          "description": "Is hn structure valid",
+          "type": "number"
+        },
+        "h1": {
+          "label": "Nb H1",
+          "description": "The count of H1.",
+          "type": "number"
+        },
+        "h2": {
+          "label": "Nb H2",
+          "description": "The count of H2.",
+          "type": "number"
+        },
+        "h3": {
+          "label": "Nb H3",
+          "description": "The count of H3.",
+          "type": "number"
+        },
+        "h4": {
+          "label": "Nb H4",
+          "description": "The count of H4.",
+          "type": "number"
+        },
+        "h5": {
+          "label": "Nb H5",
+          "description": "The count of H5.",
+          "type": "number"
+        },
+        "h6": {
+          "label": "Nb H6",
+          "description": "The count of H6.",
+          "type": "number"
+        }
+      }
+    },
+    "hn_structure_details": {
+      "label": "Hn Structure - Details",
+      "description": "Hn Structure details",
+      "structure": {
+        "url": {
+          "label": "Url",
+          "description": "The audited page",
+          "type": "string"
+        },
+        "context": {
+          "label": "Context",
+          "description": "The context",
+          "type": "string"
+        },
+        "details": {
+          "label": "Details",
+          "description": "Details",
+          "type": "string"
+        },
+        "errors": {
+          "label": "Errors",
+          "description": "Errors",
+          "type": "string"
+        },
+        "warnings": {
+          "label": "Warnings",
+          "description": "Warnings.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
