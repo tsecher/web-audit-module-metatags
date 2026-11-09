@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "keywords": [
+    "web-audit",
+    "web-audit-plugin",
+    "metatags"
+  ],
   "dependencies": {
     "web_audit": "https://github.com/tsecher/web-audit.git"
   }
