@@ -147,9 +147,6 @@ export default class HnStructureModule extends AbstractPuppeteerJourneyModule {
 			summary: eventData.result
 		});
 
-
-
-
 		this.context?.config?.storage?.add(this, 'hn_structure', this.context, eventData.result);
 		this.context?.config?.storage?.add(this, 'hn_structure_details', this.context, {
 			url: urlWrapper.url.toString(),
