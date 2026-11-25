@@ -10,6 +10,6 @@
     "metatags"
   ],
   "dependencies": {
-    "web_audit": "https://github.com/tsecher/web-audit.git"
+    "web_audit": "^5.0"
   }
 }
